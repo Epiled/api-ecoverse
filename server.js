@@ -1,25 +1,9 @@
-const express = require('express');
-const cors = require('cors');
-const path = require('path');
+import app from "./src/app.js";
 
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-// Endpoint para servir os produtos do arquivo JSON
-app.get('/api/products', (req, res) => {
-  try {
-    const products = require(path.join(__dirname, 'db/produtos.json'));
-    res.json(products);
-  } catch (error) {
-    console.error(error); // Log do erro
-    res.status(500).json({ message: 'Internal Server Error' });
-  }
-});
-
-// Definindo a porta
+// Server port
 const PORT = process.env.PORT || 3001;
+
+// Start the server
 app.listen(PORT, () => {
   console.log(`API rodando na porta ${PORT}`);
 });
