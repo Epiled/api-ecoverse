@@ -10,6 +10,7 @@
 ![Code Size](https://img.shields.io/github/languages/code-size/Epiled/api-ecoverse?style=for-the-badge)
 
 ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 
 ## 📑 Table of Contents
 
@@ -54,7 +55,7 @@ The following technologies were used to build this project:
 
 ## 📦 Install and Use
 
-<!-- **Prerequisites:** Node.js (v22.x) or higher installed. -->
+**Prerequisites:** Node.js (v22.x) or higher installed.
 
 1. Clone the repository:
 
@@ -94,7 +95,7 @@ Returns the complete list of products in the catalog
   {
     "id": 1,
     "name": "Example product",
-    "price": 99.90,
+    "price": 99.9,
     "category": "Fitness"
   }
 ]
@@ -130,4 +131,3 @@ Made with ❤️ by Felipe De Andrade 👋🏽 Get in touch!
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fademendonca/)
 [![CodePen](https://img.shields.io/badge/CodePen-000000?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/epiled)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:felipe.deam98@gmail.com)
-````
