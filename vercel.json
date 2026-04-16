@@ -1,11 +1,11 @@
 {
-  "version": 2,
+  "version": 3,
   "builds": [
     {
       "src": "server.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["db/produtos.json"]
+        "includeFiles": ["src/db/products.json"]
       }
     }
   ],
