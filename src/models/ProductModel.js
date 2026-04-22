@@ -84,6 +84,24 @@ class ProductModel {
 
     return allProducts[index];
   }
+
+  static async removeProduct(id) {
+    const allProducts = await this.findAll();
+
+    const exists = allProducts.some((p) => p.id === id);
+
+    if (!exists) return null;
+
+    const filteredProducts = allProducts.filter((p) => p.id !== id);
+
+    await writeFile(
+      productsPath,
+      JSON.stringify(filteredProducts, null, 2),
+      "utf-8",
+    );
+
+    return true;
+  }
 }
 
 export default ProductModel;

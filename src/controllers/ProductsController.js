@@ -70,6 +70,32 @@ class ProductsController {
       });
     }
   }
+
+  static async deleteProduct(req, res) {
+    const id = req.params.id;
+
+    try {
+      const deleted = await ProductModel.removeProduct(id);
+
+      if (deleted === null) {
+        return res.status(404).json({
+          success: false,
+          message: "Product not found.",
+        });
+      }
+
+      res.status(200).json({
+        success: true,
+        message: "Product deleted successfully.",
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        success: false,
+        message: "Internal server error while fetching products.",
+      });
+    }
+  }
 }
 
 export default ProductsController;
