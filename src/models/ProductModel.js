@@ -28,7 +28,7 @@ class ProductModel {
 
   static async findAll() {
     const data = await readFile(productsPath, "utf-8");
-    const { products } = JSON.parse(data);
+    const products = JSON.parse(data);
 
     return products;
   }
