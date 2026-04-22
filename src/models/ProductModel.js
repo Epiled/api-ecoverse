@@ -67,6 +67,23 @@ class ProductModel {
 
     return newProduct;
   }
+
+  static async updateProduct(id, updateData) {
+    const allProducts = await this.findAll();
+    const index = allProducts.findIndex((p) => p.id === id);
+
+    if (index === -1) return null;
+
+    allProducts[index] = { ...allProducts[index], ...updateData, id };
+
+    await writeFile(
+      productsPath,
+      JSON.stringify(allProducts, null, 2),
+      "utf-8",
+    );
+
+    return allProducts[index];
+  }
 }
 
 export default ProductModel;

@@ -44,6 +44,32 @@ class ProductsController {
       });
     }
   }
+
+  static async patchProduct(req, res) {
+    const id = req.params.id;
+
+    try {
+      const product = await ProductModel.updateProduct(id, req.body);
+
+      if (!product) {
+        return res.status(404).json({
+          success: false,
+          message: "Product not found.",
+        });
+      }
+
+      res.status(200).json({
+        success: true,
+        data: product,
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        success: false,
+        message: "Internal server error while fetching products.",
+      });
+    }
+  }
 }
 
 export default ProductsController;
