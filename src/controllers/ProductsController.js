@@ -27,6 +27,75 @@ class ProductsController {
       });
     }
   }
+
+  static async postProduct(req, res) {
+    try {
+      const product = await ProductModel.insertProduct(req.body);
+
+      res.status(201).json({
+        success: true,
+        data: product,
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        success: false,
+        message: "Internal server error while fetching products.",
+      });
+    }
+  }
+
+  static async patchProduct(req, res) {
+    const id = req.params.id;
+
+    try {
+      const product = await ProductModel.updateProduct(id, req.body);
+
+      if (!product) {
+        return res.status(404).json({
+          success: false,
+          message: "Product not found.",
+        });
+      }
+
+      res.status(200).json({
+        success: true,
+        data: product,
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        success: false,
+        message: "Internal server error while fetching products.",
+      });
+    }
+  }
+
+  static async deleteProduct(req, res) {
+    const id = req.params.id;
+
+    try {
+      const deleted = await ProductModel.removeProduct(id);
+
+      if (deleted === null) {
+        return res.status(404).json({
+          success: false,
+          message: "Product not found.",
+        });
+      }
+
+      res.status(200).json({
+        success: true,
+        message: "Product deleted successfully.",
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        success: false,
+        message: "Internal server error while fetching products.",
+      });
+    }
+  }
 }
 
 export default ProductsController;

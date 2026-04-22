@@ -2,9 +2,9 @@ import express from "express";
 import productsRouter from "./products.js";
 
 const routes = (app) => {
-  app.route("/").get((req, res) => {
+  app.route("/").get((_, res) => {
     res.json({
-      message: "Bem-vindo à Ecoverse API!",
+      message: "Welcome to Ecoverse API!",
       endpoints: {
         products: "/api/products",
         status: "online",

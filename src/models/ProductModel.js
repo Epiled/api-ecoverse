@@ -1,6 +1,8 @@
 import path from "path";
-import { readFile } from "fs/promises";
+import { readFile, writeFile } from "fs/promises";
 import { fileURLToPath } from "url";
+
+import { v4 as uuidv4 } from "uuid";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,7 +30,7 @@ class ProductModel {
 
   static async findAll() {
     const data = await readFile(productsPath, "utf-8");
-    const { products } = JSON.parse(data);
+    const products = JSON.parse(data);
 
     return products;
   }
@@ -45,6 +47,60 @@ class ProductModel {
         : true;
       return matchCategory && matchSubcategory;
     });
+  }
+
+  static async insertProduct(product) {
+    const allProducts = await this.findAll();
+
+    const newProduct = {
+      ...product,
+      id: uuidv4(),
+    };
+
+    allProducts.push(newProduct);
+
+    await writeFile(
+      productsPath,
+      JSON.stringify(allProducts, null, 2),
+      "utf-8",
+    );
+
+    return newProduct;
+  }
+
+  static async updateProduct(id, updateData) {
+    const allProducts = await this.findAll();
+    const index = allProducts.findIndex((p) => p.id === id);
+
+    if (index === -1) return null;
+
+    allProducts[index] = { ...allProducts[index], ...updateData, id };
+
+    await writeFile(
+      productsPath,
+      JSON.stringify(allProducts, null, 2),
+      "utf-8",
+    );
+
+    return allProducts[index];
+  }
+
+  static async removeProduct(id) {
+    const allProducts = await this.findAll();
+
+    const exists = allProducts.some((p) => p.id === id);
+
+    if (!exists) return null;
+
+    const filteredProducts = allProducts.filter((p) => p.id !== id);
+
+    await writeFile(
+      productsPath,
+      JSON.stringify(filteredProducts, null, 2),
+      "utf-8",
+    );
+
+    return true;
   }
 }
 

@@ -25,7 +25,9 @@
 
 ## 📖 Overview
 
-API Ecoverse
+The **Ecoverse API** is a robust back-end service built to manage product catalogs persistently through a JSON file-based database system.
+
+The project was developed with a focus on **Clear Architecture**, using **MVC** principles to ensure that data persistence logic (Model) is entirely decoupled from delivery logic (Controller).
 
 ## 🛠 Technologies
 
@@ -38,6 +40,7 @@ The following technologies were used to build this project:
 - **Layered Architecture:** Folder-based organization to decouple concerns and responsibilities.
 - **MVC (Model-View-Controller):** Logic isolation between routes and controllers for better maintainability.
 - **ES Modules (ESM):** Native import/export support and absolute path resolution via import.meta.url.
+- **Environment Variables:** Environment-specific configuration using `dotenv` for better security and flexibility.
 
 ## 🚀 Demo
 
@@ -84,21 +87,25 @@ npm run dev
 
 ## 📡 Endpoints
 
-### 🟢 GET `/api/products`
+All product resources are available via `/api/products`.
 
-Returns the complete list of products in the catalog
+| Method   | Endpoint            | Description                                      |
+| :------- | :------------------ | :----------------------------------------------- |
+| `GET`    | `/api/products`     | List all products                                |
+| `POST`   | `/api/products`     | Create a new product (Automatic UUID generation) |
+| `PATCH`  | `/api/products/:id` | Partial product update                           |
+| `DELETE` | `/api/products/:id` | Remove a product from the catalog                |
 
-**Example return:**
+### Example of Product Object:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Example product",
-    "price": 99.9,
-    "category": "Fitness"
-  }
-]
+{
+  "id": "a8155895-b643-41d7-8ecb-d725f5a314c3",
+  "productName": "Iphone 11 PRO MAX",
+  "price": 15000,
+  "category": "technology",
+  "subcategory": "phone"
+}
 ```
 
 ## 📂 File Structure
@@ -107,13 +114,15 @@ Below is the project architecture. All development should be done inside the `sr
 
 ```text
 api-ecoverse/
+├── docs/               # API documentation and Postman collections
 ├── src/                # API source code
 │   ├── controllers/    # Request processing logic
-│   ├── db/             # Local database (JSON)
+│   ├── models/         # Data access and business logic
+│   ├── db/             # Data storage (JSON)
 │   ├── routes/         # Endpoint definitions
 │   ├── app.js          # Express configuration
 │   └── server.js       # Server initialization (Entry point)
-├── .env.development    # Local environment variables
+├── .env.example        # Environment variables template
 ├── vercel.json         # Vercel deployment settings
 └── package.json        # Dependencies and scripts
 ```
