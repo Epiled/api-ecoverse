@@ -1,6 +1,8 @@
 import path from "path";
-import { readFile } from "fs/promises";
+import { readFile, writeFile } from "fs/promises";
 import { fileURLToPath } from "url";
+
+import { v4 as uuidv4 } from "uuid";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -45,6 +47,25 @@ class ProductModel {
         : true;
       return matchCategory && matchSubcategory;
     });
+  }
+
+  static async insertProduct(product) {
+    const allProducts = await this.findAll();
+
+    const newProduct = {
+      ...product,
+      id: uuidv4(),
+    };
+
+    allProducts.push(newProduct);
+
+    await writeFile(
+      productsPath,
+      JSON.stringify(allProducts, null, 2),
+      "utf-8",
+    );
+
+    return newProduct;
   }
 }
 

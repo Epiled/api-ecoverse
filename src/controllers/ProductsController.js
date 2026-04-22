@@ -27,6 +27,23 @@ class ProductsController {
       });
     }
   }
+
+  static async postProduct(req, res) {
+    try {
+      const product = await ProductModel.insertProduct(req.body);
+
+      res.status(201).json({
+        success: true,
+        data: product,
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        success: false,
+        message: "Internal server error while fetching products.",
+      });
+    }
+  }
 }
 
 export default ProductsController;
