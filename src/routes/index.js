@@ -1,5 +1,7 @@
 import express from "express";
+import authRouter from "./authRoute.js";
 import productsRouter from "./products.js";
+import usersRouter from "./UserRoute.js";
 
 const routes = (app) => {
   app.route("/").get((_, res) => {
@@ -12,7 +14,9 @@ const routes = (app) => {
     });
   });
 
+  app.use(express.json(), authRouter);
   app.use(express.json(), productsRouter);
+  app.use(express.json(), usersRouter);
 };
 
 export default routes;
