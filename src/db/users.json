@@ -1,0 +1,11 @@
+[
+  {
+    "id": "86a2ef6f-dce6-4474-ac5b-478cded0edb9",
+    "name": "felipe",
+    "password": "$2b$08$o/Fxi69WRf.nK7GLyri8GO2XHFAG91ZEqCKPoXRakTXUs.wLNtAGS",
+    "email": "felipe.manager@gmail.com",
+    "role": "manager",
+    "createdAt": "2026-04-26T20:45:46.037Z",
+    "updatedAt": "2026-04-26T20:45:46.037Z"
+  }
+]
