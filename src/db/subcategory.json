@@ -1,0 +1,19 @@
+[
+  {
+    "id": "a24b084d-d8dd-4472-b2e5-53b3295454b1",
+    "categoryId": "251de65e-8af1-48d5-8424-996ba639c6f2",
+    "slug": "smartphone",
+    "label": "Smartphone"
+  },
+  {
+    "id": "befde119-21e9-4b3f-beae-3d065404a379",
+    "categoryId": "aed7adce-47ae-4e20-9d99-5e08e0cf9546",
+    "slug": "laptop",
+    "label": "Laptop"
+  },
+  {
+    "categoryId": "251de65e-8af1-48d5-8424-996ba639c6f2",
+    "slug": "teste",
+    "label": "Teste"
+  }
+]
