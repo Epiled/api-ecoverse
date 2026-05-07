@@ -87,7 +87,23 @@ npm run dev
 
 ## 📡 Endpoints
 
-All product resources are available via `/api/products`.
+### 🔐 Authentication
+
+| Method | Endpoint          | Description                             |
+| :----- | :---------------- | :-------------------------------------- |
+| `POST` | `/api/auth/login` | Authenticate user and receive JWT Token |
+
+### 👤 Users
+
+| Method   | Endpoint         | Description         |
+| :------- | :--------------- | :------------------ |
+| `GET`    | `/api/users`     | List all users      |
+| `GET`    | `/api/users/:id` | Get user by ID      |
+| `POST`   | `/api/users`     | Register a new user |
+| `PATCH`  | `/api/users/:id` | Update user data    |
+| `DELETE` | `/api/users/:id` | Remove a user       |
+
+### 📦 Products
 
 | Method   | Endpoint            | Description                                      |
 | :------- | :------------------ | :----------------------------------------------- |
@@ -95,6 +111,26 @@ All product resources are available via `/api/products`.
 | `POST`   | `/api/products`     | Create a new product (Automatic UUID generation) |
 | `PATCH`  | `/api/products/:id` | Partial product update                           |
 | `DELETE` | `/api/products/:id` | Remove a product from the catalog                |
+
+### 📁 Categories
+
+| Method   | Endpoint              | Description             |
+| :------- | :-------------------- | :---------------------- |
+| `GET`    | `/api/categories`     | List all categories     |
+| `GET`    | `/api/categories/:id` | Get category by ID      |
+| `POST`   | `/api/categories`     | Create a new category   |
+| `PATCH`  | `/api/categories/:id` | Update category details |
+| `DELETE` | `/api/categories/:id` | Delete a category       |
+
+### 📂 Subcategories
+
+| Method   | Endpoint                 | Description                |
+| :------- | :----------------------- | :------------------------- |
+| `GET`    | `/api/subcategories`     | List all subcategories     |
+| `GET`    | `/api/subcategories/:id` | Get subcategory by ID      |
+| `POST`   | `/api/subcategories`     | Create a new subcategory   |
+| `PATCH`  | `/api/subcategories/:id` | Update subcategory details |
+| `DELETE` | `/api/subcategories/:id` | Delete a subcategory       |
 
 ### Example of Product Object:
 
@@ -116,13 +152,20 @@ Below is the project architecture. All development should be done inside the `sr
 api-ecoverse/
 ├── docs/               # API documentation and Postman collections
 ├── src/                # API source code
+│   ├── constants/      # Global constants and static values
 │   ├── controllers/    # Request processing logic
-│   ├── models/         # Data access and business logic
 │   ├── db/             # Data storage (JSON)
+│   │   ├── categories.json
+│   │   ├── products.json
+│   │   ├── subcategories.json
+│   │   └── users.json
+│   ├── middlewares/    # Authentication (JWT) and Role validation logic
+│   ├── models/         # Data access and business logic
 │   ├── routes/         # Endpoint definitions
-│   ├── app.js          # Express configuration
-│   └── server.js       # Server initialization (Entry point)
+│   ├── services/       # Reusable business logic and data processing
+│   └── app.js          # Express configuration
 ├── .env.example        # Environment variables template
+├── server.js           # Server initialization (Entry point)
 ├── vercel.json         # Vercel deployment settings
 └── package.json        # Dependencies and scripts
 ```
