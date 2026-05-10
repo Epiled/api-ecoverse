@@ -67,8 +67,10 @@ class UserController {
   static async patchUser(req, res) {
     const { id } = req.params;
 
+    const loggedUser = req.user;
+
     try {
-      const user = await userService.update(id, req.body);
+      const user = await userService.update(id, req.body, loggedUser);
 
       if (!user) {
         return res.status(404).json({
