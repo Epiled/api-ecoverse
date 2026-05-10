@@ -9,13 +9,7 @@ class AuthService {
 
     if (!user) throw new Error("User not register!");
 
-    const { name, password, email } = user;
-    const userFiltered = { name, password, email };
-
-    const equalsPassword = await bcrypt.compare(
-      dto.password,
-      userFiltered.password,
-    );
+    const equalsPassword = await bcrypt.compare(dto.password, user.password);
 
     if (!equalsPassword) {
       throw new Error("User or password invalid!");
@@ -23,8 +17,9 @@ class AuthService {
 
     const accessToken = jwt.sign(
       {
-        id: userFiltered.id,
-        email: userFiltered.email,
+        id: user.id || user._id,
+        email: user.email,
+        role: user.role,
       },
       secret,
       {
