@@ -18,11 +18,11 @@ const routes = (app) => {
 
   app.use(express.json());
 
-  app.use(express.json(), authRouter);
-  app.use(express.json(), productsRouter);
+  app.use("/api/auth", authRouter);
+  app.use("/api/products", productsRouter);
   app.use("/api/categories", categoryRouter);
   app.use("/api/subcategories", subcategoryRouter);
-  app.use(express.json(), usersRouter);
+  app.use("/api/users", usersRouter);
 };
 
 export default routes;
