@@ -2,17 +2,15 @@
   {
     "id": "251de65e-8af1-48d5-8424-996ba639c6f2",
     "slug": "technology",
-    "label": "Tecnologia"
+    "label": "Tecnologia",
+    "createAt": "2026-05-10T18:45:27.979Z",
+    "updateAt": "2026-05-10T18:45:27.987Z"
   },
   {
     "id": "aed7adce-47ae-4e20-9d99-5e08e0cf9546",
     "slug": "clothes",
-    "label": "Roupas"
-  },
-  {
-    "id": "7797ccfc-f4d9-45e4-b156-aca935aea8d8",
-    "slug": "teste patch",
-    "label": "Teste Patch",
-    "updateAt": "2026-05-01T01:28:48.711Z"
+    "label": "Roupas",
+    "createAt": "2026-05-10T18:28:04.232Z",
+    "updateAt": "2026-05-10T18:45:27.995Z"
   }
 ]

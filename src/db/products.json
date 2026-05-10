@@ -6,7 +6,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
     "price": 15000,
     "category": "technology",
-    "subcategory": "phone"
+    "subcategory": "phone",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "86da29d7-fcb9-431a-89fe-7f462acbba7a",
@@ -15,7 +17,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
     "price": 9000,
     "category": "technology",
-    "subcategory": "phone"
+    "subcategory": "phone",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "d9bc8f9e-a1aa-43ea-b051-a8756094a821",
@@ -24,16 +28,20 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
     "price": 14990,
     "category": "technology",
-    "subcategory": "phone"
+    "subcategory": "phone",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "c8555cb6-50d3-4cc9-b2c5-aa963b674d06",
-    "productName": "IPHONE 13 MINI 2",
-    "descriptionShort": "IPHONE 13 MINI 2",
+    "productName": "Iphone 11 PRO MAX BRANCO 3",
+    "descriptionShort": "Iphone 11 PRO MAX BRANCO 3",
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-    "price": 12000,
+    "price": 4550,
     "category": "technology",
-    "subcategory": "phone"
+    "subcategory": "phone",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "c8555cb6-50d3-4cc9-b2c5-aa963b674d06",
@@ -51,7 +59,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
     "price": 38000,
     "category": "technology",
-    "subcategory": "phone"
+    "subcategory": "phone",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "f914747c-7cdd-43f2-9a4d-f56c2d147c45",
@@ -60,7 +70,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
     "price": 42000,
     "category": "technology",
-    "subcategory": "phone"
+    "subcategory": "phone",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "525346c3-3f4c-4576-a760-65958662ae54",
@@ -69,7 +81,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
     "price": 520,
     "category": "technology",
-    "subcategory": "phone"
+    "subcategory": "phone",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "9dde0af2-7ea0-4d77-a255-205846c2c791",
@@ -78,7 +92,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
     "price": 149990,
     "category": "technology",
-    "subcategory": "phone"
+    "subcategory": "phone",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "5cac115e-e051-4ed2-a7e9-a627a465ef24",
@@ -87,7 +103,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
     "price": 100000,
     "category": "technology",
-    "subcategory": "phone"
+    "subcategory": "phone",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
@@ -96,7 +114,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/ fotos-produtos/foto-iphone.png",
     "price": 1200,
     "category": "technology",
-    "subcategory": "accessories"
+    "subcategory": "accessories",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "c7b6a5d4-e3f2-4109-8d7c-6b5a4d3c2e1f",
@@ -105,7 +125,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/ fotos-produtos/foto-iphone.png",
     "price": 450,
     "category": "technology",
-    "subcategory": "accessories"
+    "subcategory": "accessories",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "2d9c115e-a091-4bc2-c7e1-d927a465ef12",
@@ -114,7 +136,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/ fotos-produtos/foto-iphone.png",
     "price": 6800,
     "category": "technology",
-    "subcategory": "tablets"
+    "subcategory": "tablets",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "e4f5a6b7-c8d9-4e0f-a1b2-c3d4e5f6a7b8",
@@ -123,7 +147,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/ fotos-produtos/foto-iphone.png",
     "price": 4200,
     "category": "technology",
-    "subcategory": "tablets"
+    "subcategory": "tablets",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "f1a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c",
@@ -132,7 +158,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/ fotos-produtos/foto-iphone.png",
     "price": 12500,
     "category": "technology",
-    "subcategory": "notebooks"
+    "subcategory": "notebooks",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "d5c4b3a2-e1f0-4987-8765-4d3c2b1a0f9e",
@@ -141,7 +169,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/ fotos-produtos/foto-iphone.png",
     "price": 9800,
     "category": "technology",
-    "subcategory": "notebooks"
+    "subcategory": "notebooks",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "9a8b7c6d-5e4f-3a2b-1c0d-e9f8a7b6c5d4",
@@ -150,7 +180,9 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/ fotos-produtos/foto-iphone.png",
     "price": 5400,
     "category": "technology",
-    "subcategory": "tvs"
+    "subcategory": "tvs",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   },
   {
     "id": "1f2a3b4c-5d6e-7f8a-9b0c-1d2e3f4a5b6c",
@@ -159,6 +191,8 @@
     "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/ fotos-produtos/foto-iphone.png",
     "price": 4100,
     "category": "technology",
-    "subcategory": "tvs"
+    "subcategory": "tvs",
+    "createAt": "2026-05-10T20:55:23.511Z",
+    "updateAt": "2026-05-10T20:55:23.511Z"
   }
 ]
