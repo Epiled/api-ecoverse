@@ -17,11 +17,11 @@ class SubcategoryService {
       throw new Error("Parent category not found");
     }
 
-    const newSubcategory = {
-      categoryId: dto.categoryId,
-      slug: dto.slug,
-      label: dto.label,
-    };
+    const newSubcategory = new SubcategoryModel(
+      dto.categoryId,
+      dto.slug,
+      dto.label,
+    );
 
     const categoryData = await SubcategoryModel.create(newSubcategory);
 

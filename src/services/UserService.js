@@ -1,3 +1,4 @@
+import { ROLES } from "../constants/roles.js";
 import UserModel from "../models/UserModel.js";
 import { hash } from "bcrypt";
 
@@ -33,13 +34,18 @@ class UserService {
 
     if (!user) return null;
 
-    const updateData = { ...dto };
+    const { role, ...commonData } = dto;
+    let dataToUpdate = { ...commonData };
 
     if (dto.password) {
-      updateData.password = await hash(dto.password, 8);
+      dataToUpdate.password = await hash(dto.password, 8);
     }
 
-    const userData = await UserModel.update(id, updateData);
+    if (role && loggedUser.role === ROLES.ADMIN) {
+      dataToUpdate.role = role;
+    }
+
+    const userData = await UserModel.update(id, dataToUpdate);
 
     const { password, ...userWithoutPassword } = userData;
 

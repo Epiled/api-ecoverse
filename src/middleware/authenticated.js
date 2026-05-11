@@ -14,10 +14,9 @@ export default async (req, res, next) => {
   const [, accessToken] = token.split(" ");
 
   try {
-    const { id, email } = jwt.verify(accessToken, secret);
+    const decoded = jwt.verify(accessToken, secret);
 
-    req.userId = id;
-    req.userEmail = email;
+    req.user = decoded;
 
     return next();
   } catch (error) {

@@ -27,7 +27,7 @@
 
 The **Ecoverse API** is a robust back-end service built to manage product catalogs persistently through a JSON file-based database system.
 
-The project was developed with a focus on **Clear Architecture**, using **MVC** principles to ensure that data persistence logic (Model) is entirely decoupled from delivery logic (Controller).
+The project was developed with a focus on **Clear Architecture**, using **MSC (Model-Service-Controller)** architecture. This ensures that business logic is encapsulated in the **Service** layer, while the **Model** handles data persistence and the **Controller** manages the request/response flow.
 
 ## 🛠 Technologies
 
@@ -38,9 +38,12 @@ The following technologies were used to build this project:
 - [CORS](https://www.npmjs.com/package/cors)
 
 - **Layered Architecture:** Folder-based organization to decouple concerns and responsibilities.
-- **MVC (Model-View-Controller):** Logic isolation between routes and controllers for better maintainability.
+- **MSC (Model-Service-Controller):** Architectural pattern that decouples business logic (Service) from data access (Model) and request handling (Controller), ensuring high maintainability and testability.
 - **ES Modules (ESM):** Native import/export support and absolute path resolution via import.meta.url.
 - **Environment Variables:** Environment-specific configuration using `dotenv` for better security and flexibility.
+- **RBAC (Role-Based Access Control):** Granular access control with `ADMIN` and `CUSTOMER` roles.
+- **Secure Authentication:** Password hashing using `bcrypt` and stateless session management with `JWT`.
+- **Data Integrity:** Migration scripts to normalize and maintain legacy JSON data.
 
 ## 🚀 Demo
 
@@ -140,7 +143,9 @@ npm run dev
   "productName": "Iphone 11 PRO MAX",
   "price": 15000,
   "category": "technology",
-  "subcategory": "phone"
+  "subcategory": "phone",
+  "createdAt": "2026-05-10T20:00:00.000Z",
+  "updatedAt": "2026-05-10T20:45:00.000Z"
 }
 ```
 

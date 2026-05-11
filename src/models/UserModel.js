@@ -3,17 +3,19 @@ import path from "path";
 import { readFile, writeFile } from "fs/promises";
 import { fileURLToPath } from "url";
 
+import { ROLES } from "../constants/roles.js";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const usersPath = path.resolve(__dirname, "../db/users.json");
 
 class UserModel {
-  constructor(name, password, email, role = "user") {
+  constructor(name, password, email) {
     this.id = uuidv4();
     this.name = name;
     this.password = password;
     this.email = email;
-    this.role = role;
+    this.role = ROLES.CUSTOMER;
     this.createdAt = new Date();
     this.updatedAt = new Date();
   }
