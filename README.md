@@ -156,6 +156,7 @@ Below is the project architecture. All development should be done inside the `sr
 ```text
 api-ecoverse/
 ├── docs/               # API documentation and Postman collections
+├── scripts/            # Migration and database normalization tools
 ├── src/                # API source code
 │   ├── constants/      # Global constants and static values
 │   ├── controllers/    # Request processing logic
